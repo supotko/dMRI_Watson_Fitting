@@ -9,3 +9,4 @@ build/*
 !build/.gitkeep
 *.pyc
 *.so
+cppwrapper/watsonfitwrapper.cpp
