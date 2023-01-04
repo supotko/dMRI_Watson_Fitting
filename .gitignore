@@ -1,0 +1,11 @@
+
+.vscode/settings.json
+*.cmake
+*.bin
+*.out
+*.check_cache
+*.log
+build/*
+!build/.gitkeep
+*.pyc
+*.so
