@@ -1,0 +1,19 @@
+name: dMRI_Watson_Fitting
+channels:
+- conda-forge
+- anaconda
+dependencies:
+- python>=3.5
+- numpy
+- scipy
+- dipy
+- fury
+- pynrrd
+- plyfile
+- nibabel
+- vtk
+- psutil
+- cython
+- git
+- pip:
+  - git+https://github.com/MedVisBonn/bonndit.git
