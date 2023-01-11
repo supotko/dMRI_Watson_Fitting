@@ -8,7 +8,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 project(watsonfit)
 
 # target
-add_library(watsonfit SHARED src/bonndit/utilc/watsonfit.cpp)
+add_library(watsonfit SHARED watsonfit.cpp)
 
 # external libs
 find_package(Eigen3 REQUIRED)
@@ -28,3 +28,9 @@ target_link_libraries(watsonfit
 target_link_libraries(watsonfit PRIVATE OpenMP::OpenMP_CXX)
 target_link_libraries(watsonfit PRIVATE fftw3)
 target_link_libraries(watsonfit PRIVATE cerf)
+
+set_target_properties(watsonfit PROPERTIES PUBLIC_HEADER "watsonfit.h")
+INSTALL(TARGETS watsonfit
+        LIBRARY DESTINATION /usr/lib
+        PUBLIC_HEADER DESTINATION /usr/include/
+)

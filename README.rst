@@ -8,6 +8,12 @@ To install the standalone Watson fitting, run the following commands in the root
 
 .. code-block:: console
 
+    cd build; cmake ..; sudo make install; cd ..; python setup.py build_ext --inplace
+
+Alternative:
+
+.. code-block:: console
+
     cd build; cmake ..; make; cd ..; python setup.py build_ext --inplace
     sudo cp build/libwatsonfit.so /usr/lib
     sudo cp watsonfit.h /usr/include/
